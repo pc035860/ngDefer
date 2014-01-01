@@ -1,5 +1,5 @@
 {
-  "undef": true
+  "undef": true,
   "curly": true,
   "multistr": true,
   "expr": true,

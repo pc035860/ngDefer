@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc'
       },
-      src: ['src/*.js'],
+      src: ['<%= pkg.name %>.js'],
       gruntfile: ['Gruntfile.js']
     },
     uglify: {
@@ -51,6 +51,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
-  grunt.registerTask('default', ['jshint:beforeuglify', 'uglify']);
+  grunt.registerTask('default', ['jshint:src', 'uglify']);
 };
 
