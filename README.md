@@ -2,7 +2,7 @@
 
 An AngularJS directive for deferred DOM compiling.
 
-**This module is experimental, may or may not has further development.**
+**This module is experimental, may or may not have further development.**
 
 ### Experiement
 
