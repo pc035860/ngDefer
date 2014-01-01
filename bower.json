@@ -1,0 +1,17 @@
+{
+  "name": "ngDefer",
+  "version": "0.1.0",
+  "description": "An AngularJS directive for deferred DOM compiling.",
+  "main": "ngDefer.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "Gruntfile.js",
+    "package.json",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

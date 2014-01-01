@@ -1,0 +1,7 @@
+{
+  "undef": true
+  "curly": true,
+  "multistr": true,
+  "expr": true,
+  "boss": true
+}
