@@ -14,11 +14,11 @@ function ($queueFactory) {
   var getQueue = (function () {
     var _queuePool = {};
 
-    return function (limit) {
-      if (angular.isUndefined(_queuePool[limit])) {
-        _queuePool[limit] = $queueFactory(limit, true);
+    return function (chunkDuration) {
+      if (angular.isUndefined(_queuePool[chunkDuration])) {
+        _queuePool[chunkDuration] = $queueFactory(1, chunkDuration);
       }
-      return _queuePool[limit];
+      return _queuePool[chunkDuration];
     };
   }());
 
@@ -31,8 +31,8 @@ function ($queueFactory) {
       return function postLink(scope, iElm, iAttrs) {
         var stopWatch, task;
 
-        var queueLimit = Number(iAttrs.ngDefer) || 1,
-            queue = getQueue(queueLimit);
+        var chunkDuration = Number(iAttrs.ngDefer) || 0,
+            queue = getQueue(chunkDuration);
 
         var childElement;
 
